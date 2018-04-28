@@ -1,5 +1,6 @@
 #include <iostream>
-#include <cstring> // look for file in standard library
+#include <cstring> 
+#include <string> // look for file in standard library
 #include "ToDo.h" // look for the file here (custom file header)
 
 using namespace std;
@@ -14,12 +15,15 @@ using namespace std;
 		list = new string [length];
 	}
 	
+	
+	
 	// need destructor to free memory
 	// Destructor Delete the list - don't need to call it, it will be called automatically when the object is out of scope 
 	ToDo::~ToDo () {
+		//add save file
 		delete [] list;
 	}
-	void ToDo:: add (string item){
+	void ToDo:: add (getline (cin, item)){
 		if (next <length) {
 			list [next] = item;
 			next++;

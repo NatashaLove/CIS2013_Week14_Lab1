@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <string> 
 #include "ToDo.h" // look for the file here (custom file header)
 
 using namespace std;
@@ -28,7 +29,7 @@ int main () {
 			
 			case 'a':
 			cout << "Name a todo item: ";
-			cin >> action;
+			getline (cin, action);
 			list.add (action);
 			// add stuff to list;
 			break;
